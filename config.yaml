@@ -1,0 +1,20 @@
+host: 0.0.0.0 # http server ip
+port: 8001 # http server port. the webhook url is [http://host:port/github]
+git: /usr/bin/git # git
+log: /var/log/git-webhook-deploy/deploy.log # log file
+repositories:
+  - type: github
+    name: test # project name
+    url: https://github.com/guyanyijiu/test.git # git clone url
+    path: /home/lc/go/src # deploy path
+    branch: master # branch or tag
+    script: go build main.go
+    secret: vTQ6VdGsMVzezWO74MUf # github webhook secret
+
+  - type: github
+    name: repo
+    url: https://github.com/guyanyijiu/repo.git
+    path: /path
+    branch: master
+    script: echo hello world
+    secret: J5t2SOoL8AfObjQJoaMY0
