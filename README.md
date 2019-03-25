@@ -33,6 +33,7 @@ or run as a daemon
 ./git-webhook-deploy -c config.yaml -d
 ```
 
+Visit `host:port` in your browser. You can see: `git-webhook-deploy is running`
 
 ### GitHub Webhook settings
 
